@@ -10,7 +10,7 @@ configure({
 $(function() {
   $('<div>'
   +   '<h1>Thailand Code Jom 2013 - Qualification Round (team irb)</h1>'
-  +   '<p>Thai Pangsakulyanont (Thai) / Thiwat Rongsirigul (Thi) / Rungroj Maipradit</p>'
+  +   '<p>Thai Pangsakulyanont (Thai) / Thiwat Rongsirigul (Thi) / Rungroj Maipradit (Ice)</p>'
   + '</div>'
   ).insertBefore('#container')
 })
