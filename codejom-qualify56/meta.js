@@ -13,29 +13,12 @@ $(function() {
   +   '<p>Thai Pangsakulyanont (Thai) / Thiwat Rongsirigul (Thi) / Rungroj Maipradit</p>'
   + '</div>'
   ).insertBefore('#container')
-  var timeLeft = $('<div></div>')
-    .css({
-      position: 'absolute',
-      top: '30px',
-      right: '10px',
-      font: 'bold 25px Consolas, Menlo, Courier New'
-    })
-    .appendTo('#container')
-  replay.on('update', function() {
-    var startTime = 1359872619000
-      , endTime = startTime + 3600 * 1000
-      , finishTime = 1359876210000
-      , time = Math.min(finishTime, replay.getTime())
-      , finished = time == finishTime
-      , ff = replay.frame.speed > 2
-    if (time < startTime) {
-      timeLeft.text('')
-      return
-    }
-    timeLeft.css('color', finished ? '#5e5' : ff ? '#a88' : '#eee')
-    timeLeft.text((ff && !finished ? '\u25B6\u25B6 ' : '')
-      + formatTime(endTime - time))
-  })
+})
+
+countdown({
+  start: 1359872619000
+, end: 1359872619000 + 60 * 60 * 1000
+, finish: 1359876210000
 })
 
 jump([
